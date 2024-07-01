@@ -1,0 +1,36 @@
+# ninja log v5
+24	740	7415086422322986	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/board_leds.o	5a5aa959bce1d670
+36	786	7415086422402722	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_cache.o	f500c0b221f93bf9
+1749	2771	7415086442684846	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_dmac.o	b993f30f47fb1309
+51	861	7415086423528963	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_clocks.o	8aa7fbe14f01dea4
+3837	4617	7415086461093230	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/system.o	98786c455ad01823
+6	764	7415086422342974	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/board_init.o	aa26cdf9d854503
+769	1494	7415086429947475	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_common.o	9b0527e120e5a99f
+791	1543	7415086430196631	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_io.o	7250c7f378ec8b7c
+866	1744	7415086432239798	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/startup.o	26cde7695d7f6553
+385	507	7415150614578176	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Exe/N2L_FA_DMA_PWM.out	56acebc2f2ef51cd
+1247	1344	7415075773536971	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_sbrk.o	a76edcfe0f6dc8bb
+1498	2252	7415086437492213	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_irq.o	a3af9b08c640b075
+743	1597	7415086430645135	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_delay.o	a8b3838ecf810a1a
+2257	2921	7415086444269544	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_loader_param.o	2afd475d776eaae5
+1602	2339	7415086438060313	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_register_protection.o	fb36ecb280723ef6
+1547	2292	7415086437621781	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/bsp_reset.o	f7fe3f3526e747b6
+2296	3040	7415086445345947	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_mtu3_three_phase.o	8da7e27bb87af303
+2776	3691	7415086451894036	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_sci_uart.o	515999d23845c0e3
+2925	3833	7415086453299313	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_gpt.o	36a6ddc1d33fcead
+3044	3879	7415086453598303	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_ioport.o	5bd54ddcf2db7573
+2344	3358	7415086448525287	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Components/r_mtu3.o	affc582e13b4ec06
+3361	4045	7415086455442145	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/common_data.o	880d03c14acec884
+8	883	7415148634094662	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/hal_data.o	3ed490cf9435e99b
+4048	4793	7415086462937046	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/pin_data.o	f8511bb6061c3117
+4490	5087	7415086465937029	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/vector_data.o	b7d7b0b8224de70
+3883	4679	7415086461711153	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/main.o	80d043c88d9fb108
+6	383	7415150613332351	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Program Entry/hal_entry.o	f6cce247586f0c51
+510	5165	7415150661301872	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/postbuild.stamp	d4d282437ed6317c
+5	774	7415153838486075	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/pin_data.o	f8511bb6061c3117
+20	804	7415153838795065	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Generated Data/hal_data.o	3ed490cf9435e99b
+808	963	7415153840759100	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Exe/N2L_FA_DMA_PWM.out	56acebc2f2ef51cd
+966	7685	7415153908155031	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/postbuild.stamp	d4d282437ed6317c
+6	783	7415156192077933	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Obj/Flex Software/Program Entry/hal_entry.o	f6cce247586f0c51
+785	954	7415156193762290	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/Exe/N2L_FA_DMA_PWM.out	56acebc2f2ef51cd
+958	6527	7415156249698514	C:/Users/a5134085/RASmartConfigurator/N2L_FA_DMA_PWM/Debug/postbuild.stamp	d4d282437ed6317c
