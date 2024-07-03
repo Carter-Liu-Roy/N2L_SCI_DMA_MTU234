@@ -114,6 +114,7 @@
       <configSetting altId="mtu34.mtioc4b.p01_2" configurationId="mtu34.mtioc4b" isUsedByDriver="true"/>
       <configSetting altId="mtu34.mtioc4c.p01_0" configurationId="mtu34.mtioc4c" isUsedByDriver="true"/>
       <configSetting altId="mtu34.mtioc4d.p01_3" configurationId="mtu34.mtioc4d" isUsedByDriver="true"/>
+      <configSetting altId="mtu_poe3.poe0_hash.p01_4" configurationId="mtu_poe3.poe0_hash" isUsedByDriver="true"/>
       <configSetting altId="p03_0.output.low" configurationId="p03_0"/>
       <configSetting altId="p04_4.output.low" configurationId="p04_4"/>
       <configSetting altId="p05_0.output.low" configurationId="p05_0"/>

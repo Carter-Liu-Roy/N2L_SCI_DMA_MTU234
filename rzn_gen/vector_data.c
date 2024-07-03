@@ -9,6 +9,7 @@
             [80] = mtu3_capture_a_isr, /* TGIA2 (MTU2.TGRA input capture/compare match) */
             [82] = mtu3_counter_overflow_isr, /* TCIV2 (MTU2.TCNT overflow) */
             [88] = mtu3_counter_overflow_isr, /* TCIV3 (MTU3.TCNT overflow) */
+            [112] = g_poe01_callback, /* OEI1 (Output enable interrupt 1) */
             [122] = gpt_counter_overflow_isr, /* GPT0_OVF (GPT0 GTCNT overflow (GTPR compare match)) */
             [292] = sci_uart_eri_isr, /* SCI1_ERI (SCI1 Receive error) */
             [293] = sci_uart_rxi_isr, /* SCI1_RXI (SCI1 Receive data full) */

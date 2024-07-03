@@ -1,4 +1,4 @@
-#Mon Jul 01 13:36:09 CST 2024
+#Wed Jul 03 17:39:15 CST 2024
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_gpt\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Projects\#\#all\#\#baremetal_blinky\#\#\#\#1.3.0/all=
 com.renesas.cdt.ddsc.contentgen.options/options/suppresswarningspaths=rzn/arm
@@ -6,6 +6,7 @@ com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_dm
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#BSP\#\#rzn2l\#\#device\#\#\#\#1.3.0/all=4118448130,rzn/fsp/src/bsp/cmsis/Device/RENESAS/Include/system.h
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_gpt\#\#\#\#1.3.0/all=3646410055,rzn/fsp/src/r_gpt/r_gpt.c|903970805,rzn/fsp/inc/instances/r_gpt.h|3918073756,rzn/fsp/inc/api/r_timer_api.h
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Common\#\#all\#\#fsp_common\#\#\#\#1.3.0/libraries=
+com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_poe3\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#BSP\#\#Board\#\#rzn2l_rsk\#\#ram_execution\#\#1.3.0/all=2868228676,script/fsp_ram_execution.icf|2259251064,rzn/board/rzn2l_rsk/board_leds.c|4009162490,rzn/board/rzn2l_rsk/board_init.h|2910734931,rzn/board/rzn2l_rsk/board.h|307546867,rzn/board/rzn2l_rsk/board_ethernet_phy.h|2106927182,rzn/board/rzn2l_rsk/board_init.c|1634411774,rzn/board/rzn2l_rsk/board_leds.h
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_ioport\#\#\#\#1.3.0/all=1818952863,rzn/fsp/src/r_ioport/r_ioport.c|3285567745,rzn/fsp/inc/instances/r_ioport.h|2132046466,rzn/fsp/inc/api/r_ioport_api.h
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_mtu3_three_phase\#\#\#\#1.3.0/libraries=
@@ -13,6 +14,7 @@ com.renesas.cdt.ddsc.project.standalone.projectgenerationoptions/isCpp=false
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_dmac\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#BSP\#\#Board\#\#rzn2l_rsk\#\#ram_execution\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_sci_uart\#\#\#\#1.3.0/all=584717249,rzn/fsp/inc/api/r_transfer_api.h|3931640231,rzn/fsp/inc/instances/r_sci_uart.h|3658610908,rzn/fsp/src/r_sci_uart/r_sci_uart.c|1131102795,rzn/fsp/inc/api/r_uart_api.h
+com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_poe3\#\#\#\#1.3.0/all=2347863847,rzn/fsp/src/r_poe3/r_poe3.c|991924485,rzn/fsp/inc/instances/r_poe3.h|320383069,rzn/fsp/inc/api/r_poe3_api.h
 com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.uart_on_sci_uart.402545755=false
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#BSP\#\#rzn2l\#\#fsp\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.content/com.renesas.cdt.ddsc.content.defaultlinkerscript=script/fsp_ram_execution.icf
@@ -20,7 +22,7 @@ com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.uart_on_sci_uar
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_mtu3\#\#\#\#1.3.0/all=4054704627,rzn/fsp/src/r_mtu3/r_mtu3.c|3918073756,rzn/fsp/inc/api/r_timer_api.h|573430104,rzn/fsp/inc/instances/r_mtu3.h
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_mtu3_three_phase\#\#\#\#1.3.0/all=1776263227,rzn/fsp/src/r_mtu3_three_phase/r_mtu3_three_phase.c|1561406144,rzn/fsp/inc/instances/r_mtu3_three_phase.h|43054210,rzn/fsp/inc/api/r_three_phase_api.h
 com.renesas.cdt.ddsc.packs.componentfiles/Arm\#\#CMSIS\#\#CMSIS5\#\#CoreR\#\#\#\#5.7.0+renesas.1/all=4198626352,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/cmsis_gcc.h|1128673695,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/cmsis_compiler.h|2827098585,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/cmsis_cp15.h|2101174459,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/cmsis_iccarm.h|1243809167,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/cmsis_version.h|1441545198,rzn/arm/CMSIS_5/LICENSE.txt|499740321,rzn/arm/CMSIS_5/CMSIS/Core_R/Include/core_cr52.h
-com.renesas.cdt.ddsc.settingseditor/com.renesas.cdt.ddsc.settingseditor.active_page=PinConfiguration
+com.renesas.cdt.ddsc.settingseditor/com.renesas.cdt.ddsc.settingseditor.active_page=ICUConfigurator
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#BSP\#\#rzn2l\#\#device\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_mtu3\#\#\#\#1.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Arm\#\#CMSIS\#\#CMSIS5\#\#CoreR\#\#\#\#5.7.0+renesas.1/libraries=

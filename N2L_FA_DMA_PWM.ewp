@@ -2212,6 +2212,9 @@
                 <name>$PROJ_DIR$\rzn_cfg\fsp_cfg\r_mtu3_three_phase_cfg.h</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\rzn_cfg\fsp_cfg\r_poe3_cfg.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\rzn_cfg\fsp_cfg\r_sci_uart_cfg.h</name>
             </file>
         </group>
@@ -2378,6 +2381,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\rzn\fsp\inc\instances\r_mtu3_three_phase.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\rzn\fsp\src\r_poe3\r_poe3.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\rzn\fsp\inc\instances\r_poe3.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\rzn\fsp\inc\api\r_poe3_api.h</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\rzn\fsp\src\r_sci_uart\r_sci_uart.c</name>

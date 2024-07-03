@@ -32,6 +32,11 @@ uint8_t FA_sendBuf = 0x03;
 uint8_t FA_recBuf[6];
 
 extern transfer_info_t g_transfer0_info,g_transfer1_info;
+
+void g_poe01_callback(void){
+
+FA_sendBuf = 0x03;
+}
 /*******************************************************************************************************************//**
  * @brief  Blinky example application
  *
@@ -61,6 +66,11 @@ void hal_entry (void)
     R_BSP_IrqDisable(VECTOR_NUMBER_SCI1_RXI);
     R_BSP_IrqDisable(VECTOR_NUMBER_SCI1_TEI);
     R_BSP_IrqDisable(VECTOR_NUMBER_SCI1_TXI);
+    
+    R_POE3_Open(&g_poe30_ctrl, &g_poe30_cfg);
+    
+    R_BSP_IrqCfg(VECTOR_NUMBER_OEI1, 3, NULL);
+    R_BSP_IrqEnable(VECTOR_NUMBER_OEI1);
     
     R_SCI1->CCR3_b.DEN = 1;
     R_SCI1->DCR_b.DEAST = 3;

@@ -36,6 +36,10 @@ const ioport_pin_cfg_t g_bsp_pin_cfg_data[] = {
         .pin_cfg = ((uint32_t) IOPORT_CFG_PORT_PERI | (uint32_t) IOPORT_PIN_P013_PFC_02_MTIOC4D)
     },
     {
+        .pin = BSP_IO_PORT_01_PIN_4,
+        .pin_cfg = ((uint32_t) IOPORT_CFG_PORT_PERI | (uint32_t) IOPORT_PIN_P014_PFC_03_POE0)
+    },
+    {
         .pin = BSP_IO_PORT_01_PIN_7,
         .pin_cfg = ((uint32_t) IOPORT_CFG_DRIVE_MID | (uint32_t) IOPORT_CFG_PORT_PERI | (uint32_t) IOPORT_PIN_P017_PFC_08_CANRX0)
     },

@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include "bsp_api.h"
 #include "common_data.h"
+#include "r_poe3.h"
+#include "r_poe3_api.h"
 #include "r_dmac.h"
 #include "r_transfer_api.h"
 #include "r_gpt.h"
@@ -15,6 +17,12 @@
 #include "r_sci_uart.h"
             #include "r_uart_api.h"
 FSP_HEADER
+/** POE3 Instance. */
+extern const poe3_instance_t g_poe30;
+
+/** Access the POE3 instance using these structures when calling API functions directly (::p_api is not used). */
+extern poe3_instance_ctrl_t g_poe30_ctrl;
+extern const poe3_cfg_t g_poe30_cfg;
 /* Transfer on DMAC Instance. */
 extern const transfer_instance_t g_transfer1;
 

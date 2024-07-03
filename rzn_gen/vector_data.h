@@ -4,12 +4,13 @@
         #include "bsp_api.h"
                 /* Number of interrupts allocated */
         #ifndef VECTOR_DATA_IRQ_COUNT
-        #define VECTOR_DATA_IRQ_COUNT    (14)
+        #define VECTOR_DATA_IRQ_COUNT    (15)
         #endif
         /* ISR prototypes */
         void dmac_int_isr(void);
         void mtu3_capture_a_isr(void);
         void mtu3_counter_overflow_isr(void);
+        void g_poe01_callback(void);
         void gpt_counter_overflow_isr(void);
         void sci_uart_eri_isr(void);
         void sci_uart_rxi_isr(void);
@@ -22,6 +23,7 @@
         #define VECTOR_NUMBER_TGIA2 ((IRQn_Type) 80) /* TGIA2 (MTU2.TGRA input capture/compare match) */
         #define VECTOR_NUMBER_TCIV2 ((IRQn_Type) 82) /* TCIV2 (MTU2.TCNT overflow) */
         #define VECTOR_NUMBER_TCIV3 ((IRQn_Type) 88) /* TCIV3 (MTU3.TCNT overflow) */
+        #define VECTOR_NUMBER_OEI1 ((IRQn_Type) 112) /* OEI1 (Output enable interrupt 1) */
         #define VECTOR_NUMBER_GPT0_OVF ((IRQn_Type) 122) /* GPT0_OVF (GPT0 GTCNT overflow (GTPR compare match)) */
         #define VECTOR_NUMBER_SCI1_ERI ((IRQn_Type) 292) /* SCI1_ERI (SCI1 Receive error) */
         #define VECTOR_NUMBER_SCI1_RXI ((IRQn_Type) 293) /* SCI1_RXI (SCI1 Receive data full) */
@@ -60,6 +62,7 @@
             TGIA2_IRQn = 80, /* TGIA2 (MTU2.TGRA input capture/compare match) */
             TCIV2_IRQn = 82, /* TCIV2 (MTU2.TCNT overflow) */
             TCIV3_IRQn = 88, /* TCIV3 (MTU3.TCNT overflow) */
+            OEI1_IRQn = 112, /* OEI1 (Output enable interrupt 1) */
             GPT0_OVF_IRQn = 122, /* GPT0_OVF (GPT0 GTCNT overflow (GTPR compare match)) */
             SCI1_ERI_IRQn = 292, /* SCI1_ERI (SCI1 Receive error) */
             SCI1_RXI_IRQn = 293, /* SCI1_RXI (SCI1 Receive data full) */

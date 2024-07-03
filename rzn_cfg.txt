@@ -351,7 +351,7 @@ FSP Configuration
       P01_1 D3 MTU33_MTIOC3D - Middle - "Peripheral mode" - - "BSC: CKE; DSMIF1: MDAT1; ETHER_ESC: ESC_MDC; ETHER_ETHSW: ETHSW_MDC; ETHER_GMAC: GMAC_MDC; GPT1: GTIOC1B; MTU33: MTIOC3D; SCI2: DE2" - IO - - 
       P01_2 B2 MTU34_MTIOC4B ETH2_TXD3 Low - "Peripheral mode" - - "BSC: CS2#; ETHER_ETH2: ETH2_TXD3; GPT2: GTIOC2B; IRQ: IRQ2; MTU34: MTIOC4B" - IO - - 
       P01_3 C2 MTU34_MTIOC4D ETH2_TXD2 Low - "Peripheral mode" - - "BSC: AH#; ETHER_ETH2: ETH2_TXD2; GPT3: GTIOC3B; MTU34: MTIOC4D" - IO - - 
-      P01_4 E4 - ETH2_TXD1 - - Disabled - - "BSC: WE1#_DQMLU; ETHER_ETH2: ETH2_TXD1; IRQ: IRQ3; MTU_POE3: POE0#" - None - - 
+      P01_4 E4 MTU_POE3_POE0# ETH2_TXD1 Low - "Peripheral mode" - - "BSC: WE1#_DQMLU; ETHER_ETH2: ETH2_TXD1; IRQ: IRQ3; MTU_POE3: POE0#" - I - - 
       P01_5 B1 - ETH2_TXD0 - - Disabled - - "BSC: WE0#_DQMLL; ETHER_ETH2: ETH2_TXD0" - None - - 
       P01_6 D2 - - - - Disabled - - "BSC: A20; CANFD1: CANTXDP1; ETHER_ESC: ESC_LATCH0; ETHER_ESC: ESC_LATCH1; ETHER_GMAC: GMAC_PTPTRG1; GPT9: GTIOC9A; MTU31: MTIOC1A; PHOSTIF: HA20; SCI1: CTS1#; TRACE: TRACEDATA0" - None - - 
       P01_7 C1 CANFD0_CANRX0 CAN_RX Middle - "Peripheral mode" - - "ADC0: ADTRG0#; BSC: A19; CANFD0: CANRX0; ETHER_ETHSW: ETHSW_LPI1; GPT9: GTIOC9B; MTU31: MTIOC1B; PHOSTIF: HA19; SCI1: SCK1; SPI3: SPI_RSPCK3; TRACE: TRACEDATA1" - I - - 
@@ -577,7 +577,7 @@ FSP Configuration
       P01_1 D3 - - Low - Disabled - - "BSC: CKE; DSMIF1: MDAT1; ETHER_ESC: ESC_MDC; ETHER_ETHSW: ETHSW_MDC; ETHER_GMAC: GMAC_MDC; GPT1: GTIOC1B; MTU33: MTIOC3D; SCI2: DE2" - IO - - 
       P01_2 B2 - ETH2_TXD3 Low - Disabled - - "BSC: CS2#; ETHER_ETH2: ETH2_TXD3; GPT2: GTIOC2B; IRQ: IRQ2; MTU34: MTIOC4B" - IO - - 
       P01_3 C2 - ETH2_TXD2 Low - Disabled - - "BSC: AH#; ETHER_ETH2: ETH2_TXD2; GPT3: GTIOC3B; MTU34: MTIOC4D" - IO - - 
-      P01_4 E4 - ETH2_TXD1 - - Disabled - - "BSC: WE1#_DQMLU; ETHER_ETH2: ETH2_TXD1; IRQ: IRQ3; MTU_POE3: POE0#" - None - - 
+      P01_4 E4 - ETH2_TXD1 Low - Disabled - - "BSC: WE1#_DQMLU; ETHER_ETH2: ETH2_TXD1; IRQ: IRQ3; MTU_POE3: POE0#" - I - - 
       P01_5 B1 - ETH2_TXD0 - - Disabled - - "BSC: WE0#_DQMLL; ETHER_ETH2: ETH2_TXD0" - None - - 
       P01_6 D2 - - - - Disabled - - "BSC: A20; CANFD1: CANTXDP1; ETHER_ESC: ESC_LATCH0; ETHER_ESC: ESC_LATCH1; ETHER_GMAC: GMAC_PTPTRG1; GPT9: GTIOC9A; MTU31: MTIOC1A; PHOSTIF: HA20; SCI1: CTS1#; TRACE: TRACEDATA0" - None - - 
       P01_7 C1 - CAN_RX Low - Disabled - - "ADC0: ADTRG0#; BSC: A19; CANFD0: CANRX0; ETHER_ETHSW: ETHSW_LPI1; GPT9: GTIOC9B; MTU31: MTIOC1B; PHOSTIF: HA19; SCI1: SCK1; SPI3: SPI_RSPCK3; TRACE: TRACEDATA1" - I - - 
@@ -773,6 +773,7 @@ FSP Configuration
       XTAL R8 CGC_XTAL - - - - - - - - O "Read only" - 
     
   User Events
+    OEI1 (Output enable interrupt 1): g_poe01_callback
     
   User Event Links
     
@@ -800,6 +801,9 @@ FSP Configuration
     Parameter Checking: Default (BSP)
     Pin Output Support: Disabled
     Write Protect Enable: Disabled
+    
+  Module "Port Output Enable for MTU3 on r_poe3"
+    Parameter Checking: Default (BSP)
     
   HAL
     Instance "g_ioport I/O Port Driver on r_ioport"
@@ -1173,4 +1177,52 @@ FSP Configuration
       Register Mode: Next 1 Register Set Number of Transfers: 1
       Register Mode: Transfer Interval: 0
       General: Channel Priority: Fixed
+      
+    Instance "g_poe30 Port Output Enable for MTU3 on r_poe3"
+      General: Name: g_poe30
+      General: Output: Oscillation Stop High-Impedance Enable: Enabled
+      General: Output: DSMIF Error Interrupt: Error 0: DSMIF0 Error Interrupt Enable: Enabled
+      General: Output: DSMIF Error Interrupt: Error 0: DSMIF1 Error Interrupt Enable: Disabled
+      General: Output: Output Short Circuit1(MTU3 and MTU4): Interrupt Enable: Disabled
+      General: Output: Output Short Circuit1(MTU3 and MTU4): High-Impedance Enable: Disabled
+      General: Output: Output Short Circuit2(MTU6 and MTU7): Interrupt Enable: Disabled
+      General: Output: Output Short Circuit2(MTU6 and MTU7): High-Impedance Enable: Disabled
+      General: POE0#: Mode Select(Trigger): Falling edge
+      General: POE0#: Interrupts: Enabled
+      General: POE0#: MTU3 and MTU4: MTU3-B (MTIOC3B) and MTU3-D (MTIOC3D): MTIOC3B Pin Select: P17_6
+      General: POE0#: MTU3 and MTU4: MTU3-B (MTIOC3B) and MTU3-D (MTIOC3D): MTIOC3D Pin Select: P18_1
+      General: POE0#: MTU3 and MTU4: MTU3-B (MTIOC3B) and MTU3-D (MTIOC3D): MTIOC3B Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU3-B (MTIOC3B) and MTU3-D (MTIOC3D): MTIOC3D Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU3-B (MTIOC3B) and MTU3-D (MTIOC3D): High-Impedance Enable: Enabled
+      General: POE0#: MTU3 and MTU4: MTU4-B (MTIOC4B) and MTU4-D (MTIOC4D): MTIOC4B Pin Select: P18_2
+      General: POE0#: MTU3 and MTU4: MTU4-B (MTIOC4B) and MTU4-D (MTIOC4D): MTIOC4D Pin Select: P18_3
+      General: POE0#: MTU3 and MTU4: MTU4-B (MTIOC4B) and MTU4-D (MTIOC4D): MTIOC4B Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU4-B (MTIOC4B) and MTU4-D (MTIOC4D): MTIOC4D Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU4-B (MTIOC4B) and MTU4-D (MTIOC4D): High-Impedance Enable: Enabled
+      General: POE0#: MTU3 and MTU4: MTU4-A (MTIOC4A) and MTU4-C (MTIOC4C): MTIOC4A Pin Select: P17_7
+      General: POE0#: MTU3 and MTU4: MTU4-A (MTIOC4A) and MTU4-C (MTIOC4C): MTIOC4C Pin Select: P18_0
+      General: POE0#: MTU3 and MTU4: MTU4-A (MTIOC4A) and MTU4-C (MTIOC4C): MTIOC4A Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU4-A (MTIOC4A) and MTU4-C (MTIOC4C): MTIOC4C Active Level: Active High
+      General: POE0#: MTU3 and MTU4: MTU4-A (MTIOC4A) and MTU4-C (MTIOC4C): High-Impedance Enable: Enabled
+      General: POE4#: Mode Select(Trigger): Falling edge
+      General: POE4#: Interrupts: Disabled
+      General: POE4#: MTU6 and MTU7: MTU6-B (MTIOC6B) and MTU6-D (MTIOC6D): MTIOC6B Pin Select: P21_2
+      General: POE4#: MTU6 and MTU7: MTU6-B (MTIOC6B) and MTU6-D (MTIOC6D): MTIOC6D Pin Select: P21_4
+      General: POE4#: MTU6 and MTU7: MTU6-B (MTIOC6B) and MTU6-D (MTIOC6D): High-Impedance Enable: Disabled
+      General: POE4#: MTU6 and MTU7: MTU7-B (MTIOC7B) and MTU7-D (MTIOC7D): MTIOC7B Pin Select: P21_6
+      General: POE4#: MTU6 and MTU7: MTU7-B (MTIOC7B) and MTU7-D (MTIOC7D): MTIOC7D Pin Select: P22_0
+      General: POE4#: MTU6 and MTU7: MTU7-B (MTIOC7B) and MTU7-D (MTIOC7D): High-Impedance Enable: Disabled
+      General: POE4#: MTU6 and MTU7: MTU7-A (MTIOC7A) and MTU7-C (MTIOC7C): MTIOC7A Pin Select: P21_5
+      General: POE4#: MTU6 and MTU7: MTU7-A (MTIOC7A) and MTU7-C (MTIOC7C): MTIOC7C Pin Select: P21_7
+      General: POE4#: MTU6 and MTU7: MTU7-A (MTIOC7A) and MTU7-C (MTIOC7C): High-Impedance Enable: Disabled
+      General: POE8#: Mode Select(Trigger): Falling edge
+      General: POE8#: Interrupts: Disabled
+      General: POE8#: MTU0: MTU0-A (MTIOC0A): Pin Select: P13_2
+      General: POE8#: MTU0: MTU0-A (MTIOC0A): High-Impedance Enable: Disabled
+      General: POE8#: MTU0: MTU0-B (MTIOC0B): Pin Select: P14_4
+      General: POE8#: MTU0: MTU0-B (MTIOC0B): High-Impedance Enable: Disabled
+      General: POE8#: MTU0: MTU0-C (MTIOC0C): Pin Select: P13_3
+      General: POE8#: MTU0: MTU0-C (MTIOC0C): High-Impedance Enable: Disabled
+      General: POE8#: MTU0: MTU0-D (MTIOC0D): Pin Select: P13_4
+      General: POE8#: MTU0: MTU0-D (MTIOC0D): High-Impedance Enable: Disabled
       

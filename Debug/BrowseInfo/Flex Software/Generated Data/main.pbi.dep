@@ -66,6 +66,8 @@ C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\Debug\BrowseInfo\Flex\ Soft
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\api\bsp_api.h \
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn_cfg\fsp_cfg\r_ioport_cfg.h \
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn_cfg\fsp_cfg\bsp\bsp_pin_cfg.h \
+  C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\instances\r_poe3.h \
+  C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\api\r_poe3_api.h \
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\instances\r_dmac.h \
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\api\r_transfer_api.h \
   C:\Users\a5134085\RASmartConfigurator\N2L_FA_DMA_PWM\rzn\fsp\inc\instances\r_gpt.h \

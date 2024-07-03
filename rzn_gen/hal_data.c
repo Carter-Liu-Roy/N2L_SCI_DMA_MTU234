@@ -3,6 +3,93 @@
 
 
 
+
+poe3_instance_ctrl_t g_poe30_ctrl;
+/** POE3 setting. */
+const poe3_cfg_t g_poe30_cfg =
+{
+    .poe0                  = {
+                                 .mode                  = POE3_HIZ_MODE_FALLING_EDGE,
+                                 .interrupt             = POE3_INTERRUPT_ENABLE_ENABLED,
+                                 .mtioc3b_mtioc3d       = {
+                                                              .mtioc3b_pin_select   = POE3_MTIOC3B_PIN_SELECT_P17_6,
+                                                              .mtioc3d_pin_select   = POE3_MTIOC3D_PIN_SELECT_P18_1,
+                                                              .mtioc3b_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .mtioc3d_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_ENABLED
+                                                          },
+                                 .mtioc4b_mtioc4d       = {
+                                                              .mtioc4b_pin_select   = POE3_MTIOC4B_PIN_SELECT_P18_2,
+                                                              .mtioc4d_pin_select   = POE3_MTIOC4D_PIN_SELECT_P18_3,
+                                                              .mtioc4b_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .mtioc4d_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_ENABLED
+                                                          },
+                                 .mtioc4a_mtioc4c       = {
+                                                              .mtioc4a_pin_select   = POE3_MTIOC4A_PIN_SELECT_P17_7,
+                                                              .mtioc4c_pin_select   = POE3_MTIOC4C_PIN_SELECT_P18_0,
+                                                              .mtioc4a_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .mtioc4c_active_level = POE3_ACTIVE_LEVEL_HIGH,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_ENABLED
+                                                          }
+                             },
+    .poe4                  = {
+                                 .mode                  = POE3_HIZ_MODE_FALLING_EDGE,
+                                 .interrupt             = POE3_INTERRUPT_ENABLE_DISABLED,
+                                 .mtioc6b_mtioc6d       = {
+                                                              .mtioc6b_pin_select   = POE3_MTIOC6B_PIN_SELECT_P21_2,
+                                                              .mtioc6d_pin_select   = POE3_MTIOC6D_PIN_SELECT_P21_4,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          },
+                                 .mtioc7b_mtioc7d       = {
+                                                              .mtioc7b_pin_select   = POE3_MTIOC7B_PIN_SELECT_P21_6,
+                                                              .mtioc7d_pin_select   = POE3_MTIOC7D_PIN_SELECT_P22_0,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          },
+                                 .mtioc7a_mtioc7c       = {
+                                                              .mtioc7a_pin_select   = POE3_MTIOC7A_PIN_SELECT_P21_5,
+                                                              .mtioc7c_pin_select   = POE3_MTIOC7C_PIN_SELECT_P21_7,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          }
+                             },
+    .poe8                  = {
+                                 .mode                  = POE3_HIZ_MODE_FALLING_EDGE,
+                                 .interrupt             = POE3_INTERRUPT_ENABLE_DISABLED,
+                                 .mtioc0a               = {
+                                                              .pin_select           = POE3_MTIOC0A_PIN_SELECT_P13_2,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          },
+                                 .mtioc0b               = {
+                                                              .pin_select           = POE3_MTIOC0B_PIN_SELECT_P14_4,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          },
+                                 .mtioc0c               = {
+                                                              .pin_select           = POE3_MTIOC0C_PIN_SELECT_P13_3,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          },
+                                 .mtioc0d               = {
+                                                              .pin_select           = POE3_MTIOC0D_PIN_SELECT_P13_4,
+                                                              .hiz_output           = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                                                          }
+                             },
+    .oscillation_stop      = POE3_HIZ_OUTPUT_ENABLE_ENABLED,
+    .dsmif0_error          = POE3_HIZ_OUTPUT_ENABLE_ENABLED,
+    .dsmif1_error          = POE3_HIZ_OUTPUT_ENABLE_DISABLED,
+    .short_circuit1        = { .interrupt  = POE3_INTERRUPT_ENABLE_DISABLED,
+                               .hiz_output = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                             },
+    .short_circuit2        = { .interrupt  = POE3_INTERRUPT_ENABLE_DISABLED,
+                               .hiz_output = POE3_HIZ_OUTPUT_ENABLE_DISABLED
+                             },
+    .p_context             = NULL,
+};
+/* Instance structure to use this module. */
+const poe3_instance_t g_poe30 =
+{
+    .p_ctrl                = &g_poe30_ctrl,
+    .p_cfg                 = &g_poe30_cfg,
+    .p_api                 = &g_poe30_on_poe3
+};
 dmac_instance_ctrl_t g_transfer1_ctrl;
 
 dmac_register_set_setting_t g_transfer1_next1_register_setting =

@@ -410,9 +410,15 @@
       <description>SCI UART</description>
       <originalPack>Renesas.RZN.1.3.0.pack</originalPack>
     </component>
+    <component apiversion="" class="HAL Drivers" condition="" group="all" subgroup="r_poe3" variant="" vendor="Renesas" version="1.3.0">
+      <description>Port Output Enable 3</description>
+      <originalPack>Renesas.RZN.1.3.0.pack</originalPack>
+    </component>
   </raComponentSelection>
   <raElcConfiguration/>
-  <raIcuConfiguration/>
+  <raIcuConfiguration>
+    <interrupt event="event.poe3.oei1" isr="g_poe01_callback"/>
+  </raIcuConfiguration>
   <raModuleConfiguration>
     <module id="module.driver.ioport_on_ioport.0">
       <property id="module.driver.ioport.name" value="g_ioport"/>
@@ -786,6 +792,54 @@
       <property id="module.driver.transfer_on_dmac.transfer_interval" value="0"/>
       <property id="module.driver.transfer_on_dmac.channel_priority" value="module.driver.transfer_on_dmac.channel_priority.fixed"/>
     </module>
+    <module id="module.driver.poe3_on_poe3.1419513054">
+      <property id="module.driver.poe3.name" value="g_poe30"/>
+      <property id="module.driver.poe3.osc_stop" value="module.driver.poe3.osc_stop.enabled"/>
+      <property id="module.driver.poe3.dsmif0_err0" value="module.driver.poe3.dsmif0_err0.enabled"/>
+      <property id="module.driver.poe3.dsmif1_err0" value="module.driver.poe3.dsmif1_err0.disabled"/>
+      <property id="module.driver.poe3.short1_int" value="module.driver.poe3.short1_int.disabled"/>
+      <property id="module.driver.poe3.short1_hiz" value="module.driver.poe3.short1_hiz.disabled"/>
+      <property id="module.driver.poe3.short2_int" value="module.driver.poe3.short2_int.disabled"/>
+      <property id="module.driver.poe3.short2_hiz" value="module.driver.poe3.short2_hiz.disabled"/>
+      <property id="module.driver.poe3.poe0_mode" value="module.driver.poe3.poe0_mode.falling"/>
+      <property id="module.driver.poe3.poe0_int" value="module.driver.poe3.poe0_int.enabled"/>
+      <property id="module.driver.poe3.mtioc3b_pin" value=""/>
+      <property id="module.driver.poe3.mtioc3d_pin" value=""/>
+      <property id="module.driver.poe3.mtioc3b_active" value="module.driver.poe3.mtioc3b_active.high"/>
+      <property id="module.driver.poe3.mtioc3d_active" value="module.driver.poe3.mtioc3d_active.high"/>
+      <property id="module.driver.poe3.mtu3_bd_hiz" value="module.driver.poe3.mtu3_bd_hiz.enabled"/>
+      <property id="module.driver.poe3.mtioc4b_pin" value=""/>
+      <property id="module.driver.poe3.mtioc4d_pin" value=""/>
+      <property id="module.driver.poe3.mtioc4b_active" value="module.driver.poe3.mtioc4b_active.high"/>
+      <property id="module.driver.poe3.mtioc4d_active" value="module.driver.poe3.mtioc4d_active.high"/>
+      <property id="module.driver.poe3.mtu4_bd_hiz" value="module.driver.poe3.mtu4_bd_hiz.enabled"/>
+      <property id="module.driver.poe3.mtioc4a_pin" value=""/>
+      <property id="module.driver.poe3.mtioc4c_pin" value=""/>
+      <property id="module.driver.poe3.mtioc4a_active" value="module.driver.poe3.mtioc4a_active.high"/>
+      <property id="module.driver.poe3.mtioc4c_active" value="module.driver.poe3.mtioc4c_active.high"/>
+      <property id="module.driver.poe3.mtu4_ac_hiz" value="module.driver.poe3.mtu4_ac_hiz.enabled"/>
+      <property id="module.driver.poe3.poe4_mode" value="module.driver.poe3.poe4_mode.falling"/>
+      <property id="module.driver.poe3.poe4_int" value="module.driver.poe3.poe4_int.disabled"/>
+      <property id="module.driver.poe3.mtioc6b_pin" value=""/>
+      <property id="module.driver.poe3.mtioc6d_pin" value=""/>
+      <property id="module.driver.poe3.mtu6_bd_hiz" value="module.driver.poe3.mtu6_bd_hiz.disabled"/>
+      <property id="module.driver.poe3.mtioc7b_pin" value=""/>
+      <property id="module.driver.poe3.mtioc7d_pin" value=""/>
+      <property id="module.driver.poe3.mtu7_bd_hiz" value="module.driver.poe3.mtu7_bd_hiz.disabled"/>
+      <property id="module.driver.poe3.mtioc7a_pin" value=""/>
+      <property id="module.driver.poe3.mtioc7c_pin" value=""/>
+      <property id="module.driver.poe3.mtu7_ac_hiz" value="module.driver.poe3.mtu7_ac_hiz.disabled"/>
+      <property id="module.driver.poe3.poe8_mode" value="module.driver.poe3.poe8_mode.falling"/>
+      <property id="module.driver.poe3.poe8_int" value="module.driver.poe3.poe8_int.disabled"/>
+      <property id="module.driver.poe3.mtioc0a_pin" value=""/>
+      <property id="module.driver.poe3.mtu0_a_hiz" value="module.driver.poe3.mtu0_a_hiz.disabled"/>
+      <property id="module.driver.poe3.mtioc0b_pin" value=""/>
+      <property id="module.driver.poe3.mtu0_b_hiz" value="module.driver.poe3.mtu0_b_hiz.disabled"/>
+      <property id="module.driver.poe3.mtioc0c_pin" value=""/>
+      <property id="module.driver.poe3.mtu0_c_hiz" value="module.driver.poe3.mtu0_c_hiz.disabled"/>
+      <property id="module.driver.poe3.mtioc0d_pin" value=""/>
+      <property id="module.driver.poe3.mtu0_d_hiz" value="module.driver.poe3.mtu0_d_hiz.disabled"/>
+    </module>
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.uart_on_sci_uart.510932786"/>
@@ -798,6 +852,7 @@
       <stack module="module.driver.timer_on_mtu3.780176554"/>
       <stack module="module.driver.timer_on_gpt.1371835680"/>
       <stack module="module.driver.transfer_on_dmac.1328814226"/>
+      <stack module="module.driver.poe3_on_poe3.1419513054"/>
     </context>
     <config id="config.driver.mtu3">
       <property id="config.driver.mtu3.param_checking_enable" value="config.driver.mtu3.param_checking_enable.bsp"/>
@@ -815,6 +870,9 @@
     </config>
     <config id="config.driver.mtu3_three_phase">
       <property id="config.driver.mtu3_three_phase.param_checking_enable" value="config.driver.mtu3_three_phase.param_checking_enable.bsp"/>
+    </config>
+    <config id="config.driver.poe3">
+      <property id="config.driver.poe3.param_checking_enable" value="config.driver.poe3.param_checking_enable.bsp"/>
     </config>
     <config id="config.driver.ioport">
       <property id="config.driver.ioport.checking" value="config.driver.ioport.checking.system"/>
@@ -982,6 +1040,8 @@
       <configSetting altId="mtu34.mtioc4b.p01_2" configurationId="mtu34.mtioc4b"/>
       <configSetting altId="mtu34.mtioc4c.p01_0" configurationId="mtu34.mtioc4c"/>
       <configSetting altId="mtu34.mtioc4d.p01_3" configurationId="mtu34.mtioc4d"/>
+      <configSetting altId="mtu_poe3.mode.custom.free" configurationId="mtu_poe3.mode"/>
+      <configSetting altId="mtu_poe3.poe0_hash.p01_4" configurationId="mtu_poe3.poe0_hash"/>
       <configSetting altId="p00_5.ether_ethsw.ethsw_phylink2" configurationId="p00_5"/>
       <configSetting altId="p00_5.gpio_mode.gpio_mode_peripheral" configurationId="p00_5.gpio_mode"/>
       <configSetting altId="p00_6.mtu33.mtioc3b" configurationId="p00_6"/>
@@ -999,6 +1059,8 @@
       <configSetting altId="p01_2.gpio_mode.gpio_mode_peripheral" configurationId="p01_2.gpio_mode"/>
       <configSetting altId="p01_3.mtu34.mtioc4d" configurationId="p01_3"/>
       <configSetting altId="p01_3.gpio_mode.gpio_mode_peripheral" configurationId="p01_3.gpio_mode"/>
+      <configSetting altId="p01_4.mtu_poe3.poe0_hash" configurationId="p01_4"/>
+      <configSetting altId="p01_4.gpio_mode.gpio_mode_peripheral" configurationId="p01_4.gpio_mode"/>
       <configSetting altId="p01_7.canfd0.canrx0" configurationId="p01_7"/>
       <configSetting altId="p01_7.gpio_speed.gpio_speed_middle" configurationId="p01_7.gpio_drivecapacity"/>
       <configSetting altId="p01_7.gpio_mode.gpio_mode_peripheral" configurationId="p01_7.gpio_mode"/>
